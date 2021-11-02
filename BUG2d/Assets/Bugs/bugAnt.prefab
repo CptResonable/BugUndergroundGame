@@ -183,7 +183,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movement:
+    forceScale: 1
+    maxForce: 5
     targetPosition: {x: 0, y: 0}
+  rb: {fileID: 0}
   isSelected: 0
 --- !u!61 &1711167443451954025
 BoxCollider2D:
@@ -219,7 +222,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 845184346165873487}
-  m_BodyType: 1
+  m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0

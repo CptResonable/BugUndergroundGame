@@ -346,6 +346,9 @@
 "Assets/Scripts/Misc/Delegates.cs"
 "Assets/Scripts/Misc/VectorUtils.cs"
 "Assets/Scripts/ScriptableObjects/BugObjects.cs"
+"Assets/ThirdParty/QuaternionController/Scripts/PidController.cs"
+"Assets/ThirdParty/QuaternionController/Scripts/PidQuaternionController.cs"
+"Assets/ThirdParty/QuaternionController/Scripts/QuaternionExtensions.cs"
 -langversion:8.0
 
 /deterministic

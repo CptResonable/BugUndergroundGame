@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Bug : MonoBehaviour {
     public BugMovement movement;
+    public Rigidbody2D rb;
 
     public bool isSelected;
 
@@ -14,6 +15,7 @@ public class Bug : MonoBehaviour {
     private GameObject goSelectionMarker;
 
     public void Initialize(Vector2 spawnPosition, Vector2 targetPosition) {
+        rb = GetComponent<Rigidbody2D>();
         goSelectionMarker = transform.Find("SelectionMarker").gameObject;
         transform.position = spawnPosition;
 
