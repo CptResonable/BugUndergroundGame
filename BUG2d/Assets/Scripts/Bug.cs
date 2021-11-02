@@ -5,11 +5,16 @@ using UnityEngine;
 public class Bug : MonoBehaviour {
     public BugMovement movement;
 
+    public bool isSelected;
+
     public event Delegates.emptyDelegate updateEvent;
     public event Delegates.emptyDelegate fixedUpdateEvent;
     public event Delegates.emptyDelegate lateUpdateEvent;
 
+    private GameObject goSelectionMarker;
+
     public void Initialize(Vector2 spawnPosition, Vector2 targetPosition) {
+        goSelectionMarker = transform.Find("SelectionMarker").gameObject;
         transform.position = spawnPosition;
 
         movement.Initialize(this);
@@ -26,5 +31,15 @@ public class Bug : MonoBehaviour {
 
     private void LateUpdate() {
         lateUpdateEvent?.Invoke();
+    }
+
+    public void Select() {
+        isSelected = true;
+        goSelectionMarker.SetActive(true);
+    }
+
+    public void DeSelect() {
+        isSelected = false;
+        goSelectionMarker.SetActive(false);
     }
 }
