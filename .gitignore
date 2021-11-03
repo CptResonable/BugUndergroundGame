@@ -2,7 +2,7 @@
 #
 # Get latest from https://github.com/github/gitignore/blob/master/Unity.gitignore
 #
-/BUG2d/[Ll]ibrary/
+/BUG2d/Library/
 /BUG2d/[Tt]emp/
 /BUG2d/[Oo]bj/
 /BUG2d/[Bb]uild/

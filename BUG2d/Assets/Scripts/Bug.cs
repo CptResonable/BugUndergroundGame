@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Bug : MonoBehaviour {
+    public Telemetry telemetry;
     public BugMovement movement;
     public Rigidbody2D rb;
 
@@ -19,6 +20,7 @@ public class Bug : MonoBehaviour {
         goSelectionMarker = transform.Find("SelectionMarker").gameObject;
         transform.position = spawnPosition;
 
+        telemetry = new Telemetry(this);
         movement.Initialize(this);
         movement.SetTargetPosition(targetPosition);
     }
